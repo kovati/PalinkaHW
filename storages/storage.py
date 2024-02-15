@@ -21,8 +21,10 @@ class Storage:
     def add_palinka(self, palesz):
         self.__palinka_list.append(palesz)
 
-    def delete(self):
-        pass
+    def delete(self, palinka: "Palinka"):
+        for p in range(len(self.__palinka_list)-1):
+          if self.__palinka_list[p] == palinka:
+              self.__palinka_list.pop(p)
     def delete_by_index(self, index: int):
         self.__palinka_list.pop(index)
 

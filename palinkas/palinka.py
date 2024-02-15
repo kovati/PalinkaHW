@@ -41,5 +41,15 @@ class Palinka:
             raise ValueError("Készítés éve csak 2000-től lehet!")
         return keszites_eve
 
+    def __eq__(self, other: "Palinka"):
+        return self.__gyumolcs == other.__gyumolcs and \
+            self.__ar == other.__ar and \
+            self.__mennyiseg == other.__mennyiseg and \
+            self.__alkoholfok == other.__alkoholfok and \
+            self.__keszites_eve == other.__keszites_eve
+
+
+
+
     def __str__(self) -> str:
         return f"A {self.__gyumolcs} palinka {self.__alkoholfok} fokos, {self.__keszites_eve}-ban keszult {self.__mennyiseg} dl mennyisegben. Ara: {self.ar} Ft"
