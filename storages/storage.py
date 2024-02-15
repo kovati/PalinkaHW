@@ -23,7 +23,8 @@ class Storage:
 
     def delete(self):
         pass
-    # delete_by_index
+    def delete_by_index(self, index: int):
+        self.__palinka_list.pop(index)
 
     def rnd_palinka(self) -> Palinka:
         return self.__palinka_list[random.randint(0, len(self.__palinka_list)-1)]
